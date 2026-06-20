@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Gedeon Hub",
   description: "This web is my personal websit application",
+   icons: {
+    icon: "/brand.png",
+  },
 };
 
 export default function RootLayout({

@@ -1,13 +1,33 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #FFFFFF;
   --foreground: #2F2B3A;
+  --primary: #d9a106;
+  --secondary: #055a76;
+}
+
+@keyframes color-change {
+  0%, 100% {
+    background-color: gray;
+  }
+
+  25% {
+    background-color: wheat;
+  }
+
+  50% {
+    background-color: gray;
+  }
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --animate-color-change: color-change 1s infinite;
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -16,6 +36,8 @@
   :root {
     --background: #2C2837;
     --foreground: #ededed;
+    --primary: #d9a106;
+    --secondary: #055a76;
   }
 }
 
