@@ -17,7 +17,7 @@ export default function Nav() {
   ];
 
   return (
-    <header className="relative flex justify-around items-center px-6 md:px-0 py-6">
+    <header className="flex justify-around items-center px-6 md:px-0 py-6 fixed w-full z-50">
       <div className="transition-transform duration-500 hover:scale-110 hover:rotate-6">
         <Image
           src={Logo}

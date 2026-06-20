@@ -5,8 +5,10 @@
   --foreground: #2F2B3A;
   --primary: #d9a106;
   --secondary: #055a76;
+   --primary-opacity: #d9a10617;
+    --secondary-opacity: #055a7611;
 }
-
+ 
 @keyframes color-change {
   0%, 100% {
     background-color: gray;
@@ -19,6 +21,15 @@
   50% {
     background-color: gray;
   }
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 @theme inline {
