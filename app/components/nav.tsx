@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Logo from '@/public/logo.png';
@@ -8,6 +8,17 @@ import { FiMenu, FiX } from 'react-icons/fi';
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
+  const [showBg, setShowBg] = useState(false);
+
+useEffect(() => {
+  const handleScroll = () => {
+    setShowBg(window.scrollY > 10);
+  };
+
+  window.addEventListener('scroll', handleScroll);
+
+  return () => window.removeEventListener('scroll', handleScroll);
+}, []);
 
   const links = [
     { name: 'About', url: '#about' },
@@ -17,14 +28,16 @@ export default function Nav() {
   ];
 
   return (
-    <header className="flex justify-around items-center px-6 md:px-0 py-6 fixed w-full z-50">
+   <header
+  className={`fixed top-0 left-0 w-full z-50 flex justify-around items-center px-6 md:px-0 py-6 transition-all duration-300 ${
+    showBg
+      ? 'bg-background shadow-lg backdrop-blur-md'
+      : 'bg-transparent'
+  }`}
+>
+      
       <div className="transition-transform duration-500 hover:scale-110 hover:rotate-6">
-        <Image
-          src={Logo}
-          alt="Logo"
-          width={200}
-          height={150}
-        />
+        <Image src={Logo} alt="Logo" width={200} height={150} />
       </div>
 
       
@@ -33,7 +46,7 @@ export default function Nav() {
           <Link
             key={link.name}
             href={link.url}
-            className="relative text-2xl font-medium transition-colors duration-300 hover:text-primary after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full hover:-translate-y-2"
+            className="relative text-2xl font-medium transition-all duration-300 hover:text-primary after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full hover:-translate-y-1"
           >
             {link.name}
           </Link>
@@ -46,21 +59,22 @@ export default function Nav() {
           Hire Me!
         </button>
 
-        
+      
         <button
           className="lg:hidden"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle Menu"
         >
           {isOpen ? <FiX size={30} /> : <FiMenu size={30} />}
         </button>
       </div>
 
-      
+    
       <div
-        className={`absolute top-full bg-background z-50 right-0 w-1/2 shadow-lg lg:hidden transition-all duration-300 ${
+        className={`absolute top-full right-0 w-2/3 sm:w-1/2 bg-background shadow-lg lg:hidden transition-all duration-300 ${
           isOpen
-            ? 'opacity-100 visible'
-            : 'opacity-0 invisible'
+            ? 'opacity-100 visible translate-y-0'
+            : 'opacity-0 invisible -translate-y-2'
         }`}
       >
         <nav className="flex flex-col items-center py-6 gap-6">

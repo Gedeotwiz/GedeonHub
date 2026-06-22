@@ -13,8 +13,9 @@ export default function Home() {
   return (
     <>
       <div className="flex flex-col-reverse gap-20 h-auto lg:gap-0 lg:flex-row justify-center items-center py-30">
-        <div className=' px-9 md:px-6 lg:px-0'>
-          <div className='flex justify-start items-center gap-5  mb-5'>
+        <div className=' px-9 md:px-6 flex justify-end lg:p-0'>
+         <div className='w-full md:w-4/5'>
+           <div className='flex justify-start items-center gap-5  mb-5'>
             <h2 className='text-xl md:text-2xl lg:text-4xl'>I'M{' '}</h2>
             <h1 className='text-primary font-extrabold text-2xl md:text-4xl lg:text-6xl mb-1 md:mb-2 lg:mb-3'>
               Gedeon Tetch
@@ -26,6 +27,7 @@ export default function Home() {
           <button className='text-primary border-2 border-primary rounded-md px-10 py-3'>
             Contact Me
           </button>
+         </div>
         </div>
         <div className=' w-full  h-auto md:w-[80%] lg:w-[40%] self-center'>
           <div className='relative h-[40vh] md:h-[50vh] lg:h-[70vh]'>
