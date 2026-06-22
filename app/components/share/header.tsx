@@ -17,7 +17,6 @@ export default function Header({leftText,rightText}:IProps) {
       after:w-24
       after:h-[9px]
       after:bg-[#055a76]
-      mx-8
     "
     >
       <h1 className='text-6xl font-extrabold py-3'>{leftText}</h1>

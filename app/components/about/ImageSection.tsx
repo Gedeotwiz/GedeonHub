@@ -7,7 +7,7 @@ import Image from 'next/image';
 export default function ImagesSection() {
   const images = [{ name: Jant }];
   return (
-    <div className='w-[400px] flex flex-col justify-center items-center gap-10'>
+    <div className='flex flex-col justify-center items-center gap-10'>
       {images.map((image, index) => (
         <div
           key={index}
