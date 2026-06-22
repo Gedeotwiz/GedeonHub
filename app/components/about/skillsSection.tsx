@@ -17,22 +17,7 @@ export default function SkillsSection() {
                 <h6>FRONTEND DEVELOPMENT</h6> 
                 <p>React, Nextjs with modern state management and UI framework.</p>
             </div>
-             <div className='p-5 bg-background transition border hover:bg-[#d9a10617] border-black hover:border-primary rounded-md md:w-1/3 flex flex-col gap-1 md:gap-3 '>
-                <h6>FRONTEND DEVELOPMENT</h6> 
-                <p>React, Nextjs with modern state management and UI framework.</p>
-            </div>
-             <div className='p-5 bg-background transition border hover:bg-[#d9a10617] border-black hover:border-primary rounded-md md:w-1/3 flex flex-col gap-1 md:gap-3 '>
-                <h6>FRONTEND DEVELOPMENT</h6> 
-                <p>React, Nextjs with modern state management and UI framework.</p>
-            </div>
-             <div className='p-5 bg-background transition border hover:bg-[#d9a10617] border-black hover:border-primary rounded-md md:w-1/3 flex flex-col gap-1 md:gap-3 '>
-                <h6>FRONTEND DEVELOPMENT</h6> 
-                <p>React, Nextjs with modern state management and UI framework.</p>
-            </div>
-             <div className='p-5 bg-background transition border hover:bg-[#d9a10617] border-black hover:border-primary rounded-md md:w-1/3 flex flex-col gap-1 md:gap-3 '>
-                <h6>FRONTEND DEVELOPMENT</h6> 
-                <p>React, Nextjs with modern state management and UI framework.</p>
-            </div>
+          
         </div>
     </motion.div>
   );
