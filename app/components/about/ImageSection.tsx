@@ -38,6 +38,7 @@ export default function ImagesSection() {
             width={250}
             height={250}
             className='bg-[#555555]'
+            priority
           />
         </div>
       ))}

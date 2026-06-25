@@ -1,15 +1,14 @@
 /** @format */
 
 interface IProps{
-    leftText:string,
-    rightText?:string
+    Text:string,
 }
 
-export default function Header({leftText,rightText}:IProps) {
+export default function Header({Text}:IProps) {
   return (
     <div
       className="
-      relative inline-flex gap-2
+      relative 
       after:content-['']
       after:absolute
       after:left-0
@@ -19,9 +18,7 @@ export default function Header({leftText,rightText}:IProps) {
       after:bg-[#055a76]
     "
     >
-      <h1 className='text-6xl font-extrabold py-3'>{leftText}</h1>
-      {''}
-      <h1 className='text-secondary text-6xl font-extrabold py-3'>{rightText}</h1>
+      <h1 className='text-6xl font-extrabold py-3 bg-gradient-to-r from-white to-[#055a76] bg-clip-text text-transparent'>{Text}</h1>
     </div>
   );
 }

@@ -29,15 +29,14 @@ export default function About() {
     'PostgresQL',
   ];
   return (
-    <div className='bg-[#2F2B3A] w-full py-20 '>
-      
+    <section
+      id='about'
+      className='bg-[#2F2B3A] w-full py-20 scroll-mt-32'
+    >
       <div className=' flex flex-col justify-center items-center'>
         <div className='pb-20 flex justify-start w-full md:w-3/4 lg:w-3/5'>
-        <Header
-          leftText='About'
-          rightText='Me'
-        />
-      </div>
+          <Header Text='About Me' />
+        </div>
         <div className='flex flex-col md:flex-row px-5 md:px-0 justify-between w-full md:w-3/4 lg:w-3/5'>
           <div className='w-full md:w-2/3'>
             <motion.div
@@ -91,11 +90,10 @@ export default function About() {
             <ImagesSection />
           </div>
         </div>
-         <div className='flex justify-start w-full md:w-3/4 lg:w-3/5 py-10'>
-          <SkillsSection/>
-         </div>
+        <div className='flex justify-start w-full md:w-3/4 lg:w-3/5 py-10'>
+          <SkillsSection />
+        </div>
       </div>
-     
-    </div>
+    </section>
   );
 }

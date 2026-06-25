@@ -38,6 +38,7 @@ export default function Home() {
                 alt='lis'
                 width={20}
                 height={20}
+                priority
               />
               <span className='marker:text-green-500'>Available for work</span>
             </div>
