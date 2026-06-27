@@ -14,17 +14,17 @@ export default function Projects() {
         <div className='pb-20 flex justify-end w-full md:w-3/4 lg:w-3/5'>
           <Header Text='Featured Projects' />
         </div>
-        <div className='w-full md:w-3/4 lg:w-3/5'>
-            <div className='w-full bg-amber-600 flex'>
-                <div className='w-1/2 bg-black'>
+        <div className='w-full md:w-3/4 lg:w-3/5 rounded-tl-[20px]'>
+            <div className='w-full hover:border-3 hover:border-[#d9a10636] flex rounded-tl-[20px] rounded-tr-[20px]'>
+                <div className='w-1/2 bg-black rounded-tl-[20px] hover:border-3 hover:border-[#d9a10636]'>
                     <h3>Community Service</h3>
                 </div>
-                <div className='w-1/2'>
-                  <Image src={Dashboard} alt='app'/>
+                <div className='w-1/2 rounded-tr-[20px] hover:border-3 hover:border-[#d9a10636]'>
+                  <Image className='rounded-tr-[20px]' src={Dashboard} alt='app'/>
                 </div>
             </div>
 
-            <div className='w-full bg-amber-600 flex'>
+            <div className='w-full hover:border-3 hover:border-[#d9a10636] flex'>
                 <div className='w-1/2'>
                   <Image src={Landing} alt='app'/>
                 </div>
