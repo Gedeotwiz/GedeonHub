@@ -13,6 +13,12 @@ export default function Home() {
   return (
     <>
       <div className='flex flex-col-reverse gap-20 h-auto lg:gap-0 lg:flex-row justify-center items-center py-30'>
+        <div className='z-5 left-1/10 hidden md:block bottom-10 fixed flex flex-col justify-center items-center gap-4'>
+          <span className='[writing-mode:vertical-rl] rotate-180 whitespace-nowrap'>
+            gedeontwizerimana6@gmail.com
+          </span>
+          <div className='ml-3 w-1 h-40 bg-primary' />
+        </div>
         <div className=' px-9 md:px-6 flex justify-end lg:p-0'>
           <div className='w-full md:w-4/5'>
             <div className='flex justify-start items-center gap-5  mb-5'>

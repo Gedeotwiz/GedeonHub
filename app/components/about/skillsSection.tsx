@@ -49,7 +49,7 @@ export default function SkillsSection() {
         {skillsCard.map((skills, index) => (
           <div
             key={index}
-            className='p-5 bg-background transition border hover:bg-[#d9a10617] border-black hover:border-primary rounded-md md:w-[390px] flex flex-col gap-1 md:gap-3 '
+            className='p-5 bg-background transition border hover:bg-[#d9a10617] border-black hover:border-primary rounded-md md:w-[349px] flex flex-col gap-1 md:gap-3 '
           >
             <h6 className='text-white font-extrabold'>{skills.title}</h6>
             <p className='text-gray-400'>{skills.description}</p>

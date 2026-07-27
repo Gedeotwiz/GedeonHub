@@ -34,7 +34,7 @@ export default function About() {
       className='bg-[#2F2B3A] w-full py-20 scroll-mt-32'
     >
       <div className=' flex flex-col justify-center items-center'>
-        <div className='pb-20 flex justify-start w-full md:w-3/4 lg:w-3/5'>
+        <div className='pb-20 pl-5 md:pl-0 flex justify-start w-full md:w-3/4 lg:w-3/5'>
           <Header Text='About Me' />
         </div>
         <div className='flex flex-col md:flex-row px-5 md:px-0 justify-between w-full md:w-3/4 lg:w-3/5'>

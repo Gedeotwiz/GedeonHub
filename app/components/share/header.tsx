@@ -18,7 +18,7 @@ export default function Header({Text}:IProps) {
       after:bg-[#055a76]
     "
     >
-      <h1 className='text-6xl font-extrabold py-3 bg-gradient-to-r from-white to-[#055a76] bg-clip-text text-transparent'>{Text}</h1>
+      <h1 className='text-3xl md:text-6xl font-extrabold py-3 bg-gradient-to-r from-white to-[#055a76] bg-clip-text text-transparent'>{Text}</h1>
     </div>
   );
 }
