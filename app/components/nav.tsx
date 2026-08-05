@@ -62,7 +62,7 @@ export default function Nav() {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 flex justify-around items-center px-6 md:px-0 py-6 transition-all duration-300 ${
-        showBg ? 'bg-background shadow-lg backdrop-blur-md' : 'bg-transparent'
+        showBg ? 'bg-foreground shadow-lg backdrop-blur-md' : 'bg-transparent'
       }`}
     >
       <div className='transition-transform duration-500 hover:scale-110 hover:rotate-6'>
@@ -80,7 +80,7 @@ export default function Nav() {
           <button
             key={link.name}
             onClick={() => handleScrollToSection(link.id)}
-            className={`relative text-2xl font-medium transition-all duration-300
+            className={`relative text-2xl text-background font-medium transition-all duration-300
       ${
         activeSection === link.id
           ? 'text-primary after:w-full'
@@ -127,7 +127,7 @@ export default function Nav() {
             <button
               key={link.name}
               onClick={() => handleScrollToSection(link.id)}
-              className={`text-lg font-medium transition-colors ${
+              className={`text-lg font-medium text-background transition-colors ${
                 activeSection === link.id
                   ? 'text-primary'
                   : 'hover:text-primary'

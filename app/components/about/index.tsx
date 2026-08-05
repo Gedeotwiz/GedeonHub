@@ -65,7 +65,7 @@ export default function About() {
               {cards.map((card, index) => (
                 <div
                   key={index}
-                  className='bg-background transition border hover:bg-[#d9a10617] border-black hover:border-primary rounded-md w-[120px] h-[60px] md:w-[200px] md:h-[100px] flex flex-col gap-0 md:gap-2 justify-center items-center'
+                  className='bg-foregroundOpacit transition border hover:bg-[#d9a10617] border-black hover:border-primary rounded-md w-[120px] h-[60px] md:w-[200px] md:h-[100px] flex flex-col gap-0 md:gap-2 justify-center items-center'
                 >
                   <h1 className='text-primary text-xl md:text-3xl font-bold'>
                     {card.number}

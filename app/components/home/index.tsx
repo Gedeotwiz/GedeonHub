@@ -12,9 +12,9 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <>
-      <div className='flex flex-col-reverse gap-20 h-auto lg:gap-0 lg:flex-row justify-center items-center py-30'>
+      <div className='flex bg-foreground flex-col-reverse gap-20 h-auto lg:gap-0 lg:flex-row justify-center items-center py-30'>
         <div className='z-5 left-1/10 hidden md:block bottom-10 fixed flex flex-col justify-center items-center gap-4'>
-          <span className='[writing-mode:vertical-rl] rotate-180 whitespace-nowrap'>
+          <span className='[writing-mode:vertical-rl] text-white rotate-180 whitespace-nowrap'>
             gedeontwizerimana6@gmail.com
           </span>
           <div className='ml-3 w-1 h-40 bg-primary' />
@@ -22,12 +22,12 @@ export default function Home() {
         <div className=' px-9 md:px-6 flex justify-end lg:p-0'>
           <div className='w-full md:w-4/5'>
             <div className='flex justify-start items-center gap-5  mb-5'>
-              <h2 className='text-xl md:text-2xl lg:text-4xl'>I'M </h2>
+              <h2 className='text-xl text-background md:text-2xl lg:text-4xl'>I'M </h2>
               <h1 className='text-primary font-extrabold text-2xl md:text-4xl lg:text-6xl mb-1 md:mb-2 lg:mb-3'>
                 Gedeon Tetch
               </h1>
             </div>
-            <p className='text-2xl w-4/5 mb-10'>
+            <p className='text-2xl text-background w-4/5 mb-10'>
               UI/UX & Fullstack Developer For Both Web and Mobile
               Application{' '}
             </p>
@@ -102,6 +102,7 @@ export default function Home() {
           >
             <FaGithub
               size={24}
+              color='white'
               className='hover:text-secondary'
             />
           </Link>
@@ -110,6 +111,7 @@ export default function Home() {
             target='_blank'
           >
             <FaFacebook
+             color='white'
               size={24}
               className='hover:text-secondary'
             />
@@ -119,6 +121,7 @@ export default function Home() {
             target='_blank'
           >
             <FaLinkedin
+            color='white'
               size={24}
               className='hover:text-secondary'
             />
@@ -128,6 +131,7 @@ export default function Home() {
             target='_blank'
           >
             <FaWhatsapp
+            color='white'
               size={24}
               className='hover:text-secondary'
             />

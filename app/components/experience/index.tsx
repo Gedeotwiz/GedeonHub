@@ -5,7 +5,7 @@ export default function Experience(){
     return (
          <section
               id='experience'
-              className='w-full py-20 scroll-mt-32'
+              className='w-full bg-foregroundOpacit py-20 scroll-mt-32'
             >
               <div className=' flex flex-col justify-center items-center'>
                 <div className='pb-20 flex justify-end w-full md:w-3/4 lg:w-3/5'>

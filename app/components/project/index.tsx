@@ -81,10 +81,10 @@ export default function Projects() {
   return (
     <section
       id='project'
-      className='w-full py-20 scroll-mt-32'
+      className='w-full bg-foreground py-20 scroll-mt-32'
     >
     
-      <div className='flex flex-col p-5 md:p-0 justify-center items-center'>
+      <div className='flex  flex-col p-5 md:p-0 justify-center items-center'>
         
         
         <div className='pb-20 flex justify-end w-full md:w-3/4 lg:w-3/5'>
@@ -178,7 +178,7 @@ export default function Projects() {
                 </div>
 
                
-                <h3 className='text-2xl py-3 font-extrabold uppercase'>
+                <h3 className='text-2xl text-background py-3 font-extrabold uppercase'>
                   {project.title}
                 </h3>
 

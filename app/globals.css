@@ -3,6 +3,7 @@
 :root {
   --background: #FFFFFF;
   --foreground: #2F2B3A;
+  --foregroundOpacit: #2f2b3af0;
   --primary: #d9a106;
   --secondary: #055a76;
    --primary-opacity: #d9a10636;
@@ -39,6 +40,7 @@ html {
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-foregroundOpacit: var(--foregroundOpacit);
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
   --animate-color-change: color-change 1s infinite;
@@ -53,6 +55,7 @@ html {
     --foreground: #ededed;
     --primary: #d9a106;
     --secondary: #055a76;
+    --foregroundOpacit: #2f2b3ad3;
   }
 }
 
