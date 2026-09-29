@@ -3,6 +3,7 @@ import Home from "./components/home";
 import About from "./components/about";
 import Projects from "./components/project";
 import Experience from "./components/experience";
+import ContactSection from "./components/contact";
 
 
 export default function LandingPage() {
@@ -14,6 +15,7 @@ export default function LandingPage() {
      <About/>
      <Experience/>
      <Projects/>
+     <ContactSection/>
    </main>
    </>
   );
