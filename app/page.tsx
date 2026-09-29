@@ -4,6 +4,7 @@ import About from "./components/about";
 import Projects from "./components/project";
 import Experience from "./components/experience";
 import ContactSection from "./components/contact";
+import { Footer } from "./components/Footer";
 
 
 export default function LandingPage() {
@@ -16,6 +17,7 @@ export default function LandingPage() {
      <Experience/>
      <Projects/>
      <ContactSection/>
+     <Footer/>
    </main>
    </>
   );

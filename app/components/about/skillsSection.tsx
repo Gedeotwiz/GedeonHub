@@ -45,11 +45,11 @@ export default function SkillsSection() {
       className='w-full px-5 md:px-0'
     >
       <h3 className='text-2xl font-bold mb-5'>Core skills</h3>
-      <div className='flex flex-wrap w-full gap-5 md:gap-12'>
+      <div className='flex flex-wrap justify-center w-full gap-5 md:gap-12'>
         {skillsCard.map((skills, index) => (
           <div
             key={index}
-            className='p-5 bg-foregroundOpacit transition border hover:bg-[#d9a10617] border-black hover:border-primary rounded-md md:w-[265px] flex flex-col gap-1 md:gap-3 '
+            className='p-5 bg-foregroundOpacit transition border hover:bg-[#d9a10617] border-black hover:border-primary rounded-md md:w-[240px] flex flex-col gap-1 md:gap-3 '
           >
             <h6 className='text-white font-extrabold'>{skills.title}</h6>
             <p className='text-gray-400'>{skills.description}</p>

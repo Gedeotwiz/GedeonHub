@@ -48,7 +48,7 @@ export default function About() {
               <h2 className='text-primary font-bold mb-3'>
                 WEB AND MOBILE DEVELOPER
               </h2>
-              <p className='text-2xl'>
+              <p className='text-2xl text-gray-400'>
                 Full-stack web and mobile developer passionate about creating
                 responsive and user-friendly web applications. Skilled in
                 React.js, React Native, Next.js, Node.js, and NestJS, with
