@@ -7,6 +7,13 @@ import Image from 'next/image';
 import Logo from '@/public/logo.png';
 import { FiMenu, FiX } from 'react-icons/fi';
 
+const links = [
+  { name: 'About', id: 'about' },
+  { name: 'Experience', id: 'experience' },
+  { name: 'Project', id: 'project' },
+  { name: 'Contact', id: 'contact' },
+];
+
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   const [showBg, setShowBg] = useState(false);
@@ -37,13 +44,6 @@ export default function Nav() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const links = [
-    { name: 'About', id: 'about' },
-    { name: 'Experience', id: 'experience' },
-    { name: 'Project', id: 'project' },
-    { name: 'Contact', id: 'contact' },
-  ];
-
   const handleScrollToSection = (id: string) => {
     const section = document.getElementById(id);
 
@@ -61,7 +61,7 @@ export default function Nav() {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 flex justify-around items-center px-6 md:px-0 py-6 transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full z-50 flex justify-between items-center px-4 sm:px-6 lg:px-10 py-3 sm:py-4 transition-all duration-300 ${
         showBg ? 'bg-foreground shadow-lg backdrop-blur-md' : 'bg-transparent'
       }`}
     >
@@ -69,18 +69,19 @@ export default function Nav() {
         <Image
           src={Logo}
           alt='Logo'
-          width={200}
-          height={150}
+          width={120}
+          height={60}
           priority
+          className='w-20 sm:w-24 h-auto'
         />
       </div>
 
-      <nav className='hidden lg:flex items-center gap-12'>
+      <nav className='hidden xl:flex items-center gap-8 2xl:gap-12'>
         {links.map((link) => (
           <button
             key={link.name}
             onClick={() => handleScrollToSection(link.id)}
-            className={`relative text-2xl text-background font-medium transition-all duration-300
+            className={`relative text-background font-medium transition-all duration-300
       ${
         activeSection === link.id
           ? 'text-primary after:w-full'
@@ -101,22 +102,32 @@ export default function Nav() {
         ))}
       </nav>
 
-      <div className='flex items-center gap-4'>
-        <button className='hidden md:block bg-[#2F2B3A] px-8 py-3 rounded-md text-lg text-white hover:bg-primary transition-colors duration-300'>
-          Hire Me!
-        </button>
+      <div className='flex items-center gap-2 sm:gap-4'>
+        <div className='hidden md:flex items-center gap-3'>
+          <a
+            href='/TG_Resume.pdf'
+            download='TG_Resume.pdf'
+            className='bg-[#2F2B3A] px-3 lg:px-5 py-2 rounded-md text-sm lg:text-base text-white border-2 border-primary transition-colors duration-300'
+          >
+           Download My CV
+          </a>
+          <button className='bg-primary px-4 lg:px-5 py-2 rounded-md text-sm lg:text-base text-white transition-colors duration-300'>
+            Hire Me!
+          </button>
+        </div>
 
         <button
-          className='lg:hidden'
+          className='flex xl:hidden items-center justify-center rounded-md p-2 text-white hover:text-primary focus-visible:outline-2 focus-visible:outline-primary'
           onClick={() => setIsOpen(!isOpen)}
-          aria-label='Toggle Menu'
+          aria-label={isOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={isOpen}
         >
-          {isOpen ? <FiX size={30} /> : <FiMenu size={30} />}
+          {isOpen ? <FiX size={30}  color='white'/> : <FiMenu size={30} color='white'/>}
         </button>
       </div>
 
       <div
-        className={`absolute top-full right-0 w-2/3 sm:w-1/2 bg-background shadow-lg lg:hidden transition-all duration-300 ${
+        className={`absolute top-full right-0 w-full sm:w-80 bg-foreground shadow-lg xl:hidden transition-all duration-300 ${
           isOpen
             ? 'opacity-100 visible translate-y-0'
             : 'opacity-0 invisible -translate-y-2'
@@ -137,7 +148,15 @@ export default function Nav() {
             </button>
           ))}
 
-          <button className='bg-[#2F2B3A] px-8 py-3 rounded-md text-white hover:bg-primary transition-colors'>
+          <a
+            href='/TG_Resume.pdf'
+            download='TG_Resume.pdf'
+            onClick={() => setIsOpen(false)}
+            className='md:hidden bg-[#2F2B3A] px-8 py-3 rounded-md text-white border border-primary transition-colors'
+          >
+            Download My CV
+          </a>
+          <button className='md:hidden bg-primary px-8 py-3 rounded-md text-white transition-colors'>
             Hire Me!
           </button>
         </nav>

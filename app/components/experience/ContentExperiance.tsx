@@ -58,10 +58,10 @@ export function ContentExperiance() {
     ];
     return (
         <>
-            <div className="flex flex-col lg:flex-row justify-between gap-6 mb-16">
+            <div className="flex flex-col lg:flex-row justify-between gap-6 mb-10 sm:mb-16">
                 <div>
-                    <h1 className="text-3xl text-[#055a76] md:text-4xl font-bold">Experience</h1>
-                    <p className="text-gray-400 mt-3 text-lg">{totalYear}+ Years Building Scalable Web & Mobile Applications</p>
+                    <h1 className="text-3xl text-[#055a76] sm:text-4xl font-bold">Experience</h1>
+                    <p className="text-gray-400 mt-3 text-base sm:text-lg">{totalYear}+ Years Building Scalable Web & Mobile Applications</p>
                 </div>
                 <div className="max-w-md" >
                     <span className="bg-[#f5b400] text-black px-4 py-1.5 rounded-full text-sm font-bold">✨ {totalYear}+ Years Experience</span>
@@ -72,19 +72,19 @@ export function ContentExperiance() {
             </div>
 
             {/* Timeline */}
-            <div className="relative border-l border-[#f5b400]/40 ml-3 md:ml-6">
+            <div className="relative border-l border-[#f5b400]/40 ml-2 sm:ml-4">
                 {experiences.map((exp, i) => (
-                    <div key={i} className="mb-12 ml-6 md:ml-12 relative">
-                        <span className="absolute -left-[39px] md:-left-[61px] top-6 w-3 h-3 bg-[#f5b400] rounded-full"></span>
+                    <div key={i} className="mb-8 sm:mb-12 ml-4 sm:ml-8 md:ml-12 relative">
+                        <span className="absolute -left-[25px] sm:-left-[41px] md:-left-[61px] top-5 w-3 h-3 bg-[#f5b400] rounded-full"></span>
 
-                        <div className="grid md:grid-cols-[320px_1fr] gap-6 bg-[#3a3847] p-6 rounded-xl border border-white/5 hover:border-[#f5b400]/30 transition">
+                        <div className="grid md:grid-cols-[minmax(0,260px)_minmax(0,1fr)] lg:grid-cols-[minmax(0,320px)_minmax(0,1fr)] gap-5 sm:gap-6 bg-[#3a3847] p-4 sm:p-6 rounded-xl border border-white/5 hover:border-[#f5b400]/30 transition">
                             {/* Left */}
                             <div className="flex items-start gap-4">
                                 <div className="w-12 h-12 rounded-lg bg-[#2e2c3a] border border-[#f5b400]/40 flex items-center justify-center font-bold text-[#f5b400]">
                                     {exp.color}
                                 </div>
-                                <div>
-                                    <h3 className="font-bold text-[#055a76] text-lg">{exp.company}</h3>
+                                <div className="min-w-0">
+                                    <h3 className="font-bold text-[#055a76] text-lg break-words">{exp.company}</h3>
                                     <p className="text-[#f5b400] text-sm">{exp.role}</p>
                                     <span className="inline-block mt-2 text-xs border border-[#f5b400]/40 px-2 py-1 rounded-full text-[#f5b400]">{exp.period}</span>
                                 </div>

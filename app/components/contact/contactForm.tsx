@@ -15,7 +15,7 @@ export function ContactForm(){
     console.log('Form submitted:', formData);
   };
     return(
-         <div className="rounded-xl shadow-md border hover:border-gray-100 p-6 md:p-8 flex flex-col justify-between h-full">
+         <div className="w-full min-w-0 lg:flex-1 rounded-xl shadow-md border hover:border-gray-100 p-4 sm:p-6 md:p-8 flex flex-col justify-between h-full">
           <form onSubmit={handleSubmit} className="space-y-5">
             <h3 className="text-lg font-bold text-white mb-2">Send Me a Message</h3>
             

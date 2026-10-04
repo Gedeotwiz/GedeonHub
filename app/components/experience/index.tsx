@@ -8,14 +8,11 @@ export default function Experience() {
       id='experience'
       className='w-full bg-foregroundOpacit py-20 scroll-mt-32'
     >
-      <div className=' flex flex-col justify-center items-center'>
-        {/* <div className='pb-20 flex justify-end w-full md:w-3/4 lg:w-3/5'>
-          <Header Text='Work Experience' />
-        </div> */}
-        <div className='pb-50  w-full md:w-3/4 lg:w-3/5'>
-         <ContentExperiance/>
-      </div>
-      <div className='pb-20  w-full md:w-3/4 lg:w-3/5'>
+      <div className='flex flex-col justify-center items-center px-4 sm:px-6'>
+        <div className='pb-14 sm:pb-20 w-full max-w-6xl'>
+          <ContentExperiance />
+        </div>
+        <div className='pb-12 sm:pb-20 w-full max-w-6xl'>
           <GithubContributions />
         </div>
       </div>

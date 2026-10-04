@@ -33,12 +33,12 @@ export default function About() {
       id='about'
       className='bg-[#2F2B3A] w-full py-20 scroll-mt-32'
     >
-      <div className=' flex flex-col justify-center items-center'>
-        <div className='pb-20 pl-5 md:pl-0 flex justify-start w-full md:w-3/4 lg:w-3/5'>
+      <div className='flex flex-col justify-center items-center px-4 sm:px-6'>
+        <div className='pb-12 sm:pb-16 flex justify-start w-full max-w-6xl'>
           <Header Text='About Me' />
         </div>
-        <div className='flex flex-col md:flex-row px-5 md:px-0 justify-between w-full md:w-3/4 lg:w-3/5'>
-          <div className='w-full md:w-2/3'>
+        <div className='flex flex-col md:flex-row gap-8 md:gap-10 justify-between w-full max-w-6xl'>
+          <div className='w-full md:flex-1 min-w-0'>
             <motion.div
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -48,7 +48,7 @@ export default function About() {
               <h2 className='text-primary font-bold mb-3'>
                 WEB AND MOBILE DEVELOPER
               </h2>
-              <p className='text-2xl text-gray-400'>
+              <p className='text-lg sm:text-xl lg:text-2xl text-gray-400'>
                 Full-stack web and mobile developer passionate about creating
                 responsive and user-friendly web applications. Skilled in
                 React.js, React Native, Next.js, Node.js, and NestJS, with
@@ -61,36 +61,36 @@ export default function About() {
               <ImagesSection />
             </div>
 
-            <div className='flex justify-center md:justify-start items-center gap-5 py-5'>
+            <div className='grid grid-cols-3 gap-2 sm:gap-4 py-5'>
               {cards.map((card, index) => (
                 <div
                   key={index}
-                  className='bg-foregroundOpacit transition border hover:bg-[#d9a10617] border-black hover:border-primary rounded-md w-[120px] h-[60px] md:w-[200px] md:h-[100px] flex flex-col gap-0 md:gap-2 justify-center items-center'
+                  className='bg-foregroundOpacit transition border hover:bg-[#d9a10617] border-black hover:border-primary rounded-md min-w-0 min-h-16 sm:min-h-20 md:min-h-24 flex flex-col gap-0 md:gap-2 justify-center items-center text-center'
                 >
                   <h1 className='text-primary text-xl md:text-3xl font-bold'>
                     {card.number}
                   </h1>
-                  <span>{card.lable}</span>
+                  <span className='text-xs sm:text-sm'>{card.lable}</span>
                 </div>
               ))}
             </div>
 
-            <div className='flex gap-5 overflow-x-auto hide-scrollbar'>
+            <div className='flex flex-wrap gap-2 sm:gap-3'>
               {skills.map((skill, index) => (
                 <div
                   key={index}
-                  className='flex-none rounded-xl border border-secondary bg-[#055a7611] px-4'
+                  className='rounded-xl border border-secondary bg-[#055a7611] px-3 py-1'
                 >
                   <span className='font-bold text-secondary'>{skill}</span>
                 </div>
               ))}
             </div>
           </div>
-          <div className='hidden md:block'>
+          <div className='hidden md:flex md:flex-1 md:justify-end'>
             <ImagesSection />
           </div>
         </div>
-        <div className='flex justify-start w-full md:w-3/4 lg:w-3/5 py-10'>
+        <div className='flex justify-start w-full max-w-6xl py-10'>
           <SkillsSection />
         </div>
       </div>

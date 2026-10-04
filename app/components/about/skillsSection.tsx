@@ -42,14 +42,14 @@ export default function SkillsSection() {
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className='w-full px-5 md:px-0'
+      className='w-full'
     >
       <h3 className='text-2xl font-bold mb-5'>Core skills</h3>
-      <div className='flex flex-wrap justify-center w-full gap-5 md:gap-12'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full gap-4 sm:gap-5'>
         {skillsCard.map((skills, index) => (
           <div
             key={index}
-            className='p-5 bg-foregroundOpacit transition border hover:bg-[#d9a10617] border-black hover:border-primary rounded-md md:w-[240px] flex flex-col gap-1 md:gap-3 '
+            className='p-5 bg-foregroundOpacit transition border hover:bg-[#d9a10617] border-black hover:border-primary rounded-md flex flex-col gap-1 md:gap-3'
           >
             <h6 className='text-white font-extrabold'>{skills.title}</h6>
             <p className='text-gray-400'>{skills.description}</p>

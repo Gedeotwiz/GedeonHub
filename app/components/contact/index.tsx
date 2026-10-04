@@ -6,9 +6,9 @@ export default function ContactSection() {
   
 
   return (
-    <section id='contact' className="relative w-full flex justify-center bg-foregroundOpacit py-16 px-4 md:px-8 overflow-hidden select-none">
+    <section id='contact' className="relative w-full flex justify-center bg-foregroundOpacit py-12 sm:py-16 px-4 sm:px-6 overflow-hidden">
       
-      <div className='w-full md:w-3/4 lg:w-3/5'>
+      <div className='relative w-full max-w-6xl'>
       <div className="absolute -left-10 top-12 w-24 h-44 opacity-80 pointer-events-none md:left-0 lg:w-32 lg:h-56">
         <svg className="w-full h-full fill-current text-green-700/30" viewBox="0 0 100 200">
           <path d="M10,50 Q40,20 80,60 Q50,90 10,50 Z M5,110 Q50,70 90,130 Q40,170 5,110 Z" />
@@ -22,15 +22,15 @@ export default function ContactSection() {
       </div>
 
       
-      <div className="flex">
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
         
        
-        <div className="flex w-1/2 flex-col space-y-6 lg:pr-4">
+        <div className="flex w-full lg:w-2/5 flex-col space-y-5 sm:space-y-6 lg:pr-4">
           <div>
             <span className="text-[#d9a106] font-bold text-xs uppercase tracking-wider block mb-1">
               Contact Us
             </span>
-            <h2 className="text-[#055a76] font-extrabold text-3xl md:text-4xl tracking-tight uppercase">
+            <h2 className="text-[#055a76] font-extrabold text-3xl sm:text-4xl tracking-tight uppercase">
               Get In Touch
             </h2>
           </div>
@@ -62,7 +62,7 @@ export default function ContactSection() {
               </div>
               <div>
                 <p className="text-xs text-gray-500 font-medium">Email</p>
-                <p className="text-sm font-semibold text-white">gedeontwizerimana6@gmail.com</p>
+                <p className="text-sm font-semibold text-white break-all">gedeontwizerimana6@gmail.com</p>
               </div>
             </div>
 
