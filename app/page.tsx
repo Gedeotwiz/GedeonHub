@@ -7,6 +7,7 @@ import ContactSection from "./components/contact";
 import { Footer } from "./components/Footer";
 
 
+
 export default function LandingPage() {
   return (
    <>

@@ -38,7 +38,7 @@ export default function Home() {
         </div>
         <div className='w-full max-w-sm sm:max-w-md lg:max-w-[42%] lg:flex-1 self-center'>
           <div className='relative aspect-square w-full'>
-            <div className='animate-bounce px-3 sm:px-5 py-2 border border-green-700 w-max max-w-[90%] flex items-center justify-center gap-2 absolute right-0 sm:right-4 top-4 sm:top-10 z-20 rounded-es-2xl text-xs sm:text-sm'>
+            <div className='animate-bounce px-3 sm:px-5 py-2 border border-green-700 w-max max-w-[90%] flex items-center justify-center gap-2 absolute right-0 sm:right-4 top-4 sm:top-32 z-20 rounded-es-2xl text-xs sm:text-sm'>
               <Image
                 src={Brand}
                 alt='lis'
@@ -137,6 +137,7 @@ export default function Home() {
             />
           </Link>
         </div>
+        
       </section>
     </>
   );

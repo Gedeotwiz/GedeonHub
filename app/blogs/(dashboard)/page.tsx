@@ -1,5 +1,5 @@
 import { redirect } from 'next/navigation';
 
-export default function BlogsPage() {
+export default function DashboardIndexPage() {
   redirect('/blogs/overview');
 }

@@ -16,6 +16,17 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Private Blogs dashboard
+
+The dashboard is available at `/blogs` and is intentionally not linked from the public navigation. Configure server-side login credentials before signing in:
+
+1. Copy `.env.example` to `.env.local`.
+2. Set `BLOGS_ADMIN_USERNAME` and `BLOGS_ADMIN_PASSWORD` to private credentials.
+3. Set `BLOGS_SESSION_SECRET` to a random value of at least 32 characters (for example, generate one with `openssl rand -base64 32`).
+4. Restart the development server and open `/blogs`.
+
+The dashboard uses an HTTP-only, signed session cookie that expires after eight hours. Keep `.env.local` private and do not commit it. Dashboard photos, documents, profile settings, and contact messages are currently stored in the browser and are not shared across browsers or devices.
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.

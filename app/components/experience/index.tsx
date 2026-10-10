@@ -1,4 +1,4 @@
-import Header from "../share/header"
+
 import { ContentExperiance } from "./ContentExperiance"
 import GithubContributions from "./contribution"
 
@@ -12,7 +12,7 @@ export default function Experience() {
         <div className='pb-14 sm:pb-20 w-full max-w-6xl'>
           <ContentExperiance />
         </div>
-        <div className='pb-12 sm:pb-20 w-full max-w-6xl'>
+        <div className='pb-5 flex justify-center sm:pb-10 w-full max-w-6xl'>
           <GithubContributions />
         </div>
       </div>
