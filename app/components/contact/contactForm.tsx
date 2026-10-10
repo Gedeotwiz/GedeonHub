@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { ContactMessage, getMessages, saveMessages } from '@/app/blogs/storage';
 
 export function ContactForm(){
     const [formData, setFormData] = useState({
@@ -8,16 +9,33 @@ export function ContactForm(){
     subject: '',
     message: '',
   });
+  const [formNotice, setFormNotice] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    setFormNotice('');
 
-    console.log('Form submitted:', formData);
+    try {
+      const message: ContactMessage = {
+        id: crypto.randomUUID(),
+        name: formData.fullName,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        createdAt: new Date().toISOString(),
+      };
+      saveMessages([...getMessages(), message]);
+      setFormData({ fullName: '', email: '', subject: '', message: '' });
+      setFormNotice('Your message has been added to the contact inbox on this device.');
+    } catch {
+      setFormNotice('Your message could not be saved. Please try again.');
+    }
   };
     return(
          <div className="w-full min-w-0 lg:flex-1 rounded-xl shadow-md border hover:border-gray-100 p-4 sm:p-6 md:p-8 flex flex-col justify-between h-full">
           <form onSubmit={handleSubmit} className="space-y-5">
             <h3 className="text-lg font-bold text-white mb-2">Send Me a Message</h3>
+            {formNotice && <p role="status" className="rounded-md bg-white/10 p-3 text-sm text-green-500 border-1 border-green-500">{formNotice}</p>}
             
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

@@ -4,6 +4,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import Logo from '@/public/logo.png';
 import { FiMenu, FiX } from 'react-icons/fi';
 
@@ -100,6 +101,12 @@ export default function Nav() {
             {link.name}
           </button>
         ))}
+        <Link
+          href='/blogs'
+          className='relative font-medium text-background transition-all duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:text-primary hover:after:w-full'
+        >
+          Blogs
+        </Link>
       </nav>
 
       <div className='flex items-center gap-2 sm:gap-4'>
@@ -147,6 +154,13 @@ export default function Nav() {
               {link.name}
             </button>
           ))}
+          <Link
+            href='/blogs'
+            onClick={() => setIsOpen(false)}
+            className='text-lg font-medium text-background transition-colors hover:text-primary'
+          >
+            Blogs
+          </Link>
 
           <a
             href='/TG_Resume.pdf'
